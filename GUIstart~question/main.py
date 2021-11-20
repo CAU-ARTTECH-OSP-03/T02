@@ -18,7 +18,7 @@ class Startwindow(QWidget):  # A
         winB.setGeometry(400, 500, 210, 40)
         self.setWindowTitle('유미의 세포들 심리테스트 ⸜(*ˊᗜˋ*)⸝')
 
-        label1 = QLabel('오픈소스 프로그래밍 team5의 유미의 세포들 심리테스트', self)
+        label1 = QLabel('오픈소스 프로그래밍 team2의 유미의 세포들 심리테스트', self)
         label1.move(250, 200)
 
         self.show()
