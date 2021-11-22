@@ -719,7 +719,48 @@ class question20(QWidget):  # U
         adding(1, (self.rbtn1.isChecked()))
         self.close()
         print(mbti_result())
-        #V.show()
+        V.show()
+
+class progressbar(QWidget):  # V
+    global W
+
+    def __init__(self):
+        super().__init__()
+        self.initUI()
+
+    def initUI(self):
+        self.pbar = QProgressBar(self)
+        self.pbar.setGeometry(150, 130, 300, 25)
+
+        self.btn = QPushButton('분석 시작하기', self)
+        self.btn.move(200, 200)
+        self.btn.clicked.connect(self.doAction)
+
+        self.timer = QBasicTimer()
+        self.step = 0
+
+        self.setWindowTitle('결과 분석 중')
+        self.setGeometry(1000, 500, 500, 350)
+
+        # Qlabel : 당신의 프라임 세포를 분석 중입니다. 추가하기
+
+
+    def timerEvent(self, e):
+        if self.step >= 100:
+            self.timer.stop()
+            self.btn.setText('결과 확인하기')   # 결과 확인하기 버튼 누르면 결과 확인 창으로 넘어가도록 수정필요!
+            return
+
+        self.step = self.step + 1
+        self.pbar.setValue(self.step)
+
+    def doAction(self):
+        if self.timer.isActive():
+            self.timer.stop()
+            self.btn.setText('분석 재개')
+        else:
+            self.timer.start(100, self)
+            self.btn.setText('분석 멈추기')
         
 
 
@@ -745,9 +786,7 @@ R = question17()
 S = question18()
 T = question19()
 U = question20()
-# V= progressbar()
-
-
+V= progressbar()
 
 
 sys.exit(app.exec_())
