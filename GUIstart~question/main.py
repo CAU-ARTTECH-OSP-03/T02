@@ -287,7 +287,7 @@ class question8(QWidget):  # I
         self.label1 = QLabel('Q8. 다음 주까지 해결해야 할 중요한 일이 생겼다. 당신은 이 일을 어떻게 처리할 것인가?', self)
         self.label1.move(100, 200)
 
-        self.rbtn1 = QRadioButton('남은 기간 동안의 계호기을 먼저 세운 후 계획에 따라 실천한다.', self)  # J
+        self.rbtn1 = QRadioButton('남은 기간 동안의 계획을 먼저 세운 후 계획에 따라 실천한다.', self)  # J
         self.rbtn1.move(200, 300)
         self.rbtn1.setChecked(True)
         self.rbtn2 = QRadioButton(self)
