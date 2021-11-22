@@ -181,7 +181,7 @@ class Etc(QWidget):
         btn_save.clicked.connect(self.save)
         btn_game.clicked.connect(self.next)
 
-        self.show()
+        # self.show() -> 3개의 창이 동시에 뜨는 문제 해결
 
     def center(self):
         qr = self.frameGeometry()
@@ -223,7 +223,7 @@ class Game(QWidget): # 뒤에 이어질 컨텐츠 일단 소개페이지정도�
         self.setLayout(layout)
         self.setGeometry(300, 300, 300, 200)
 
-        self.show()
+        # self.show() -> 3개의 창이 동시에 뜨는 문제 해결
 
     def center(self):
         qr = self.frameGeometry()
