@@ -1,0 +1,36 @@
+Hello, we are team 2, and I am presenter Kim Yujin. From now on, I will present our team's opensource project. 
+--------------------------------------------------
+The table of contents is as above.
+---------------------------------------------------
+The first is our team project’s topic and contents.
+-----------------------------------------------------
+Our team's topic is "Personality Type Test" based on the webtoon "Yumi's Cell". I will explain the details of the project. 
+First of all, the MBTI of various cells in “Yumi's cells” was classified and set. Then, based on this, when the user answers 20 questions, it tells which cells are the user's prime cells according to the user's response.
+--------------------------------------------------
+Second, I will explain the progress step by step. 
+--------------------------------------------------
+We set goals in four milestone: content planning, psychological test page implementation, additional content production, and final execution program completion. 
+Therefore, before this interim announcement, we set a goal to implement a code that asks users questions, receives responses, and shows the results screen. And we achieved it. 
+-------------------------------------------------------
+For this, after confirming the topic, we went through the process of planning detailed content, devising and implementing MBTI classification algorithms, and creating a test GUI.
+After that, we will proceed the project according to the table organized in ppt page. We will implement the code so that users can play games using the results after the psychological test.
+------------------------------------------------------------
+Third, I will explain the opensource we used. 
+------------------------------------------------------------
+We used pyqt5 to code GUI programs. PyQt means a framework that allows you to create a GUI program by connecting Python's code to the layout of Qt.
+Additionally, we plan to use the pygame library when implementing additional contents.
+-----------------------------------------------------------------
+Fourth, I will introduce the roles of each team member. 
+----------------------------------------------------------------
+In the content planning, the project was carried out together. And the investigation was conducted by dividing each role as shown in the ppt.
+In the code section, Kim Yu-jin was in charge of the early GUI, Shin Seon-woo was in charge of the latter part of the GUI, and Oh Chang-jin and Hwang Yu-jung were in charge of the implementation of the mbti result classification function.
+------------------------------------------------------------------
+Lastly, l will briefly introduce the functions while watching our demo video. So, let's watch the demo video first.
+------------------------------------------------------------------
+Now I will explain the function briefly. 
+First, as the program runs, the psychological test proceeds when the user presses the start button. Next, the user can choose an option for 20 questions and move on to the next question. 
+If the user selects all 20 questions, images of their prime cells and explanations of them appear depending on the responses. 
+Additionally, you can select the capture and save functions and buttons that allow you to move on to games that will be created in the future.
+-------------------------------------------------------------------
+Thank you for listening to the presentation.
+
