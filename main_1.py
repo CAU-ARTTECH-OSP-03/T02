@@ -2,6 +2,8 @@ from typing import ChainMap
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
+from PyQt5.QtGui import QIcon
+
 
 import sys
 from mod1 import *
@@ -14,13 +16,17 @@ class Startwindow(QWidget):  # A
         super().__init__()
         self.initUI()
 
+
     def initUI(self):
+        self.setWindowIcon(QIcon('winicon.png'))
         self.setGeometry(800,300,1000,700)   # self.center을 사용할지 고민
 
         winB = QPushButton('심리테스트 시작하기', self)
         winB.clicked.connect(self.winB_clicked)
         winB.setGeometry(400, 500, 210, 40)
         self.setWindowTitle('유미의 세포들 심리테스트 ⸜(*ˊᗜˋ*)⸝')
+
+
 
         label1 = QLabel('오픈소스 프로그래밍 team2의 유미의 세포들 심리테스트', self)
         label1.move(250, 200)
@@ -40,6 +46,7 @@ class question1(QWidget):  # B
         self.initUI()
 
     def initUI(self):
+        self.setWindowIcon(QIcon('winicon.png'))
         self.setGeometry(800,300,1000,700)
         self.setWindowTitle('질문1')
 
@@ -75,6 +82,7 @@ class question2(QWidget):  # C
         self.initUI()
 
     def initUI(self):
+        self.setWindowIcon(QIcon('winicon.png'))
         self.setGeometry(800,300,1000,700)
         self.setWindowTitle('질문 2')
 
@@ -111,6 +119,7 @@ class question3(QWidget):  # D
         self.initUI()
 
     def initUI(self):
+        self.setWindowIcon(QIcon('winicon.png'))
         self.setGeometry(800,300,1000,700)
         self.setWindowTitle('질문 3')
 
@@ -145,6 +154,7 @@ class question4(QWidget):  # E
         self.initUI()
 
     def initUI(self):
+        self.setWindowIcon(QIcon('winicon.png'))
         self.setGeometry(800, 300, 1000, 700)
         self.setWindowTitle('질문 4')
 
@@ -179,6 +189,7 @@ class question5(QWidget):  # F
         self.initUI()
 
     def initUI(self):
+        self.setWindowIcon(QIcon('winicon.png'))
         self.setGeometry(800, 300, 1000, 700)
         self.setWindowTitle('질문 5')
 
@@ -213,6 +224,7 @@ class question6(QWidget):  # G
         self.initUI()
 
     def initUI(self):
+        self.setWindowIcon(QIcon('winicon.png'))
         self.setGeometry(800, 300, 1000, 700)
         self.setWindowTitle('질문 6')
 
@@ -247,6 +259,7 @@ class question7(QWidget):  # H
         self.initUI()
 
     def initUI(self):
+        self.setWindowIcon(QIcon('winicon.png'))
         self.setGeometry(800, 300, 1000, 700)
         self.setWindowTitle('질문 7')
 
@@ -283,6 +296,7 @@ class question8(QWidget):  # I
         self.initUI()
 
     def initUI(self):
+        self.setWindowIcon(QIcon('winicon.png'))
         self.setGeometry(800, 300, 1000, 700)
         self.setWindowTitle('질문 8')
 
@@ -318,6 +332,7 @@ class question9(QWidget):  # J
         self.initUI()
 
     def initUI(self):
+        self.setWindowIcon(QIcon('winicon.png'))
         self.setGeometry(800, 300, 1000, 700)
         self.setWindowTitle('질문 9')
 
@@ -352,6 +367,7 @@ class question10(QWidget):  # K
         self.initUI()
 
     def initUI(self):
+        self.setWindowIcon(QIcon('winicon.png'))
         self.setGeometry(800, 300, 1000, 700)
         self.setWindowTitle('질문 10')
 
@@ -387,6 +403,7 @@ class question11(QWidget):  # L
         self.initUI()
 
     def initUI(self):
+        self.setWindowIcon(QIcon('winicon.png'))
         self.setGeometry(800, 300, 1000, 700)
         self.setWindowTitle('질문 11')
 
@@ -422,6 +439,7 @@ class question12(QWidget):  # M
         self.initUI()
 
     def initUI(self):
+        self.setWindowIcon(QIcon('winicon.png'))
         self.setGeometry(800, 300, 1000, 700)
         self.setWindowTitle('질문 12')
 
@@ -456,6 +474,7 @@ class question13(QWidget):  # N
         self.initUI()
 
     def initUI(self):
+        self.setWindowIcon(QIcon('winicon.png'))
         self.setGeometry(800, 300, 1000, 700)
         self.setWindowTitle('질문 13')
 
@@ -490,6 +509,7 @@ class question14(QWidget):  # O
         self.initUI()
 
     def initUI(self):
+        self.setWindowIcon(QIcon('winicon.png'))
         self.setGeometry(800, 300, 1000, 700)
         self.setWindowTitle('질문 14')
 
@@ -526,6 +546,7 @@ class question15(QWidget):  # P
         self.initUI()
 
     def initUI(self):
+        self.setWindowIcon(QIcon('winicon.png'))
         self.setGeometry(800, 300, 1000, 700)
         self.setWindowTitle('질문 15')
 
@@ -560,6 +581,7 @@ class question16(QWidget):  # Q
         self.initUI()
 
     def initUI(self):
+        self.setWindowIcon(QIcon('winicon.png'))
         self.setGeometry(800, 300, 1000, 700)
         self.setWindowTitle('질문 16')
 
@@ -594,6 +616,7 @@ class question17(QWidget):  # R
         self.initUI()
 
     def initUI(self):
+        self.setWindowIcon(QIcon('winicon.png'))
         self.setGeometry(800, 300, 1000, 700)
         self.setWindowTitle('질문 17')
 
@@ -629,6 +652,7 @@ class question18(QWidget):  # S
         self.initUI()
 
     def initUI(self):
+        self.setWindowIcon(QIcon('winicon.png'))
         self.setGeometry(800, 300, 1000, 700)
         self.setWindowTitle('질문 18')
 
@@ -663,6 +687,7 @@ class question19(QWidget):  # T
         self.initUI()
 
     def initUI(self):
+        self.setWindowIcon(QIcon('winicon.png'))
         self.setGeometry(800, 300, 1000, 700)
         self.setWindowTitle('질문 19')
 
@@ -698,6 +723,7 @@ class question20(QWidget):  # U
         self.initUI()
 
     def initUI(self):
+        self.setWindowIcon(QIcon('winicon.png'))
         self.setGeometry(800, 300, 1000, 700)
         self.setWindowTitle('질문 20')
 
