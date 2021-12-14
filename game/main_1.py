@@ -9,7 +9,6 @@ sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 from Fruit_Ninja.MainMenu import HomeScreen
 
 from mod1 import *
-#from main_2 import *
 
 
 class Startwindow(QWidget):  # A
@@ -27,8 +26,6 @@ class Startwindow(QWidget):  # A
         winB.clicked.connect(self.winB_clicked)
         winB.setGeometry(400, 500, 210, 40)
         self.setWindowTitle('유미의 세포들 심리테스트 ⸜(*ˊᗜˋ*)⸝')
-
-
 
         label1 = QLabel('오픈소스 프로그래밍 team2의 유미의 세포들 심리테스트', self)
         label1.move(250, 200)
@@ -424,14 +421,12 @@ class question11(QWidget):  # L
         self.winB.clicked.connect(self.winB_clicked)
         self.winB.setGeometry(400, 500, 210, 40)
 
-
     def winB_clicked(self):
 
         adding(2, (self.rbtn1.isChecked()))
         self.close()
         M.show()
 
-   
 
 class question12(QWidget):  # M
     global N
@@ -455,7 +450,6 @@ class question12(QWidget):  # M
         self.rbtn2.move(200, 350)
         self.rbtn2.setText('ㅠㅠㅠㅠ 감동이야 ㅠㅠ 고마워 사랑해ㅠㅠㅠ ')  # F
 
-
         self.winB = QPushButton('다음 질문으로', self)
         self.winB.clicked.connect(self.winB_clicked)
         self.winB.setGeometry(400, 500, 210, 40)
@@ -466,7 +460,6 @@ class question12(QWidget):  # M
         self.close()
         N.show()
 
-   
 
 class question13(QWidget):  # N
     global O
@@ -490,7 +483,6 @@ class question13(QWidget):  # N
         self.rbtn2.move(250, 350)
         self.rbtn2.setText('실수를 방지하기 위해 발언을 자제한다.')  # I
 
-
         self.winB = QPushButton('다음 질문으로', self)
         self.winB.clicked.connect(self.winB_clicked)
         self.winB.setGeometry(400, 500, 210, 40)
@@ -501,7 +493,6 @@ class question13(QWidget):  # N
         self.close()
         O.show()
 
-    
 
 class question14(QWidget):  # O
     global P
@@ -525,11 +516,9 @@ class question14(QWidget):  # O
         self.rbtn2.move(300, 350)
         self.rbtn2.setText('어떻게든 혼자 해결해보고자 한다.')  # I
 
-
         self.winB = QPushButton('다음 질문으로', self)
         self.winB.clicked.connect(self.winB_clicked)
         self.winB.setGeometry(400, 500, 210, 40)
-
 
 
     def winB_clicked(self):
@@ -538,7 +527,6 @@ class question14(QWidget):  # O
         self.close()
         P.show()
 
-   
 
 class question15(QWidget):  # P
     global Q
@@ -562,7 +550,6 @@ class question15(QWidget):  # P
         self.rbtn2.move(50, 350)
         self.rbtn2.setText('설탕 150mg….? 대충 이정도 무게를 150mg이라고 기준으로 정하고 요리하면 되겠지?')  # N
 
-
         self.winB = QPushButton('다음 질문으로', self)
         self.winB.clicked.connect(self.winB_clicked)
         self.winB.setGeometry(400, 500, 210, 40)
@@ -573,7 +560,6 @@ class question15(QWidget):  # P
         self.close()
         Q.show()
 
-   
 
 class question16(QWidget):  # Q
     global R
@@ -597,7 +583,6 @@ class question16(QWidget):  # Q
         self.rbtn2.move(250, 350)
         self.rbtn2.setText('혼자만의 시간을 즐긴다.')  # I
 
-
         self.winB = QPushButton('다음 질문으로', self)
         self.winB.clicked.connect(self.winB_clicked)
         self.winB.setGeometry(400, 500, 210, 40)
@@ -608,7 +593,6 @@ class question16(QWidget):  # Q
         self.close()
         R.show()
 
-   
 
 class question17(QWidget):  # R
     global S
@@ -632,11 +616,9 @@ class question17(QWidget):  # R
         self.rbtn2.move(200, 350)
         self.rbtn2.setText('낯선 업무를 편하게 물어볼 수 있는 자유로운 환경')  # P
 
-
         self.winB = QPushButton('다음 질문으로', self)
         self.winB.clicked.connect(self.winB_clicked)
         self.winB.setGeometry(400, 500, 210, 40)
-
 
     def winB_clicked(self):
 
@@ -644,7 +626,6 @@ class question17(QWidget):  # R
         self.close()
         S.show()
 
-    
 
 class question18(QWidget):  # S
     global T
@@ -668,7 +649,6 @@ class question18(QWidget):  # S
         self.rbtn2.move(100, 350)
         self.rbtn2.setText('(책을 읽다 말고)오….주인공이 A를 이 방에서 이렇게 죽였다고? 그게 가능한가?')  # N
 
-
         self.winB = QPushButton('다음 질문으로', self)
         self.winB.clicked.connect(self.winB_clicked)
         self.winB.setGeometry(400, 500, 210, 40)
@@ -679,7 +659,6 @@ class question18(QWidget):  # S
         self.close()
         T.show()
 
-   
 
 class question19(QWidget):  # T
     global U
@@ -703,11 +682,9 @@ class question19(QWidget):  # T
         self.rbtn2.move(150, 350)
         self.rbtn2.setText('소중해 너는, 늘 고마워, 넌 꼭 필요한 사람이야, 난 널 믿어 ')  # F
 
-
         self.winB = QPushButton('다음 질문으로', self)
         self.winB.clicked.connect(self.winB_clicked)
         self.winB.setGeometry(400, 500, 210, 40)
-
 
     def winB_clicked(self):
 
@@ -715,7 +692,6 @@ class question19(QWidget):  # T
         self.close()
         U.show()
 
-    
 
 class question20(QWidget):  # U
     global V
@@ -780,13 +756,11 @@ class Result(QWidget):
         self.resize(1000, 750)
         self.center()
         self.loadcell()
-        
 
         btn_next = QPushButton('다음', self)
         btn_next.move(850, 670)
         btn_next.clicked.connect(self.next)
 
-        #self.show()
         
     def center(self):
         qr = self.frameGeometry()
@@ -947,8 +921,6 @@ class Etc(QWidget):
         btn_save.clicked.connect(self.save)
         btn_game.clicked.connect(HomeScreen)
 
-        # self.show() -> 3개의 창이 동시에 뜨는 문제 해결
-
     def center(self):
         qr = self.frameGeometry()
         cp = QDesktopWidget().availableGeometry().center()
@@ -963,40 +935,7 @@ class Etc(QWidget):
         # 스크린샷 저장
         exit()
 
-    def next(self): # 뒤에 이어질 컨텐츠
-        self.close()
-        game.show()
 
-"""
-class Game(QWidget): # 뒤에 이어질 컨텐츠 일단 소개페이지정도만 만듦....
-
-    def __init__(self):
-        super().__init__()
-        self.initUI()
-
-    def initUI(self):
-        self.setWindowTitle("MBTI with UMI's Cells")
-        self.setWindowIcon(QIcon('icon.png'))
-        self.resize(1000, 750)
-        self.center()
-
-        txt = QLabel('추후 완성 예정', self)
-        txt.setAlignment(Qt.AlignCenter)
-
-        layout = QVBoxLayout()
-        layout.addWidget(txt)
-
-        self.setLayout(layout)
-        self.setGeometry(300, 300, 300, 200)
-
-    def center(self):
-        qr = self.frameGeometry()
-        cp = QDesktopWidget().availableGeometry().center()
-        qr.moveCenter(cp)
-        self.move(qr.topLeft())
-
-"""
-    
 
 app = QApplication(sys.argv)
 A = Startwindow()
