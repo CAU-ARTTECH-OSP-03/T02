@@ -757,7 +757,7 @@ class Result(QWidget):
         self.center()
         self.loadcell()
 
-        btn_next = QPushButton('다음', self)
+        btn_next = QPushButton('게임 start!', self)
         btn_next.move(850, 670)
         btn_next.clicked.connect(self.next)
 
@@ -888,7 +888,7 @@ class Result(QWidget):
         etc.show()
 
 
-class Etc(QWidget):
+class Etc(QWidget): # 게임 설명
 
     global game
 
@@ -901,6 +901,8 @@ class Etc(QWidget):
         self.setWindowIcon(QIcon('icon.png'))
         self.resize(1000, 750)
         self.center()
+
+        """
 
         btn_share = QPushButton('공유하기', self)
         btn_save = QPushButton('결과화면 캡쳐 및 저장', self)
@@ -934,6 +936,8 @@ class Etc(QWidget):
     def save(self):
         # 스크린샷 저장
         exit()
+        
+    """
 
 
 
