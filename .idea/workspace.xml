@@ -3,6 +3,44 @@
   <component name="ChangeListManager">
     <list default="true" id="fa5b2449-b269-454b-b3f0-c1040bdb502b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/Font.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/Images/Apple.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/Images/AppleBottom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/Images/AppleTop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/Images/Bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/Images/Bomb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/Images/Explosions.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/Images/GrapeBottom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/Images/GrapeTop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/Images/Grapes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/Images/Lemon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/Images/LemonBottom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/Images/LemonTop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/Images/Orange.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/Images/OrangeBottom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/Images/OrangeTop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/Images/Strawberry.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/Images/StrawberryBottom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/Images/StrawberryTop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/Images/enfj.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/Images/enfp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/Images/entj.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/Images/entp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/Images/esfj.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/Images/esfp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/Images/estj.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/Images/estp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/Images/infj.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/Images/infp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/Images/intj.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/Images/intp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/Images/isfj.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/Images/isfp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/Images/istj.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/Images/istp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/MainMenu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Fruit_Ninja/main.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/game/main_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/main_1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
