@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa5b2449-b269-454b-b3f0-c1040bdb502b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/MBTI_ninja.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/questionbg.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/py.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/.idea/mbti.iml" beforeDir="false" afterPath="$PROJECT_DIR$/game/.idea/mbti.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/game/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/game/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game/main_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/main_1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

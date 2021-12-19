@@ -11,7 +11,6 @@ from MBTI_Ninja.MainMenu import HomeScreen
 
 from mod1 import *
 
-
 class Startwindow(QWidget):  # A
     global B
 
@@ -29,7 +28,7 @@ class Startwindow(QWidget):  # A
         winB.setGeometry(400, 550, 210, 40)
 
         bgImage = QImage('startbg.png')
-        size = bgImage.scaled(QSize(1000, 750))
+        size = bgImage.scaled(QSize(1000,750))
         palette = QPalette()
         palette.setBrush(10, QBrush(size))
 
@@ -932,6 +931,7 @@ class question19(QWidget):  # T
         self.winB.clicked.connect(self.winB_clicked)
         self.winB.setGeometry(400, 550, 210, 40)
 
+
     def center(self):
         qr = self.frameGeometry()
         cp = QDesktopWidget().availableGeometry().center()
@@ -977,6 +977,7 @@ class question20(QWidget):  # U
         self.winB = QPushButton('결과 분석하기', self)
         self.winB.clicked.connect(self.winB_clicked)
         self.winB.setGeometry(400, 550, 210, 40)
+
 
     def center(self):
         qr = self.frameGeometry()
@@ -1122,6 +1123,7 @@ class Result(QWidget):
         elif self.result == 10:
             pixmap1.load('./cell/entp.png')
             scaleChangedImage = pixmap1.scaled(300, 300, Qt.KeepAspectRatio)
+
             cell_txt.setText("본인의 잘난 맛에 살아가고 지는 건 절대 용납 못하는 당신!\n\n"
                              "당신의 머리 속의 가장 중요한 세포는 바로\n\n"
                              "평상시에는 쿨하지만, 자존심을 긁히는 일이 생긴다면\n\n"
