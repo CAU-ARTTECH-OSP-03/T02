@@ -99,7 +99,7 @@ def load_images(mbti, path_to_directory):
 
 #Calculates and draws everything for the fruits
 class Fruit():
-    def __init__(self, Image, x=None, y=None, Vx=None, gravity=None, width=200,height=200):
+    def __init__(self, Image, x=None, y=None, Vx=None, gravity=None, width=150,height=150):
         """Declares all the starting Variables."""
         self.Image = Image
         self.x = x
@@ -281,7 +281,7 @@ def game_loop(mbti,Colors=[(0,255,0),(0,150,0)]):
     Lives = 3
     score = 0
     
-    for i in range(random.randint(2,5)):
+    for i in range(random.randint(2,4)):
         choice = random.choice(Choices)
         if choice == obj+'1': 
             Fruits.append(Fruit(Images[choice],500,800,random.randint(-20,20),random.randint(-22,-20),125,125))
@@ -327,7 +327,6 @@ def game_loop(mbti,Colors=[(0,255,0),(0,150,0)]):
             if pygame.sprite.collide_rect(player, fruit) == True and player.drag and not fruit.split:
                 fruit.Image = Images["_sparkles"]
                 fruit.split = True
-                Fruits[-1].split = True
                 score += 10
         for fruit in Bombs:
             fruit.update()

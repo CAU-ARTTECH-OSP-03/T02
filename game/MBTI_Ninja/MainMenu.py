@@ -22,18 +22,19 @@ from pygame import freetype
 # Initialize the game engine
 
 
+clock = pygame.time.Clock()
 
 DisplayWidth,DisplayHeight = 1000, 800
-clock = pygame.time.Clock()
 window_size = pygame.display.get_desktop_sizes()
-
 pos_x = DisplayWidth / 2 - window_size[0][0] / 2
 pos_y = DisplayHeight - window_size[0][1]
 os.environ['SDL_VIDEO_WINDOW_POS'] = '%i,%i' % (pos_x,pos_y)
 os.environ['SDL_VIDEO_CENTERED'] = '0'
-
 gameDisplay = pygame.display.set_mode((DisplayWidth,DisplayHeight))
 pygame.display.set_caption("MBTI Slasher")
+
+
+
 font_100 = pygame.freetype.Font("MBTI_Ninja/Font.ttf", 100)
 font_50 = pygame.freetype.Font("./MBTI_Ninja/Font.ttf", 50)
 font_75 = pygame.freetype.Font("./MBTI_Ninja/Font.ttf", 75)
@@ -161,8 +162,8 @@ def shorten(Num):
     return Num
 
 def HomeScreen(mbti, score=0):
-    
-    print("홈스크린 실행")
+
+        
     game_run = True
     Buttons = [Button(275,600,200,100,"Play"),Button(525,600,200,100,"Change Color")]
     CcButtons = [Button(750,650,200,100,"Exit"),Button(150,250,50,50,""),Button(800,250,50,50,"")]

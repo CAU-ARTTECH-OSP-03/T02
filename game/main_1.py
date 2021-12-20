@@ -1311,6 +1311,7 @@ class Etc(QWidget): # 게임 설명
 
     def game(self) :
         self.close()
+        MainMenu.pygame.init()
         MainMenu.HomeScreen(self.icon)
 
 
