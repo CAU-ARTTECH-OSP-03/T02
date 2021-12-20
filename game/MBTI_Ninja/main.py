@@ -11,7 +11,7 @@ except ImportError:
     sys.exit()
 try:
 
-    import MainMenu
+    from MBTI_Ninja import MainMenu
 except ImportError:
     print("Make sure you have all the extra files")
 from pygame import freetype
@@ -32,13 +32,62 @@ gameDisplay = pygame.display.set_mode((DisplayWidth,DisplayHeight))
 pygame.display.set_caption("Name")
 
 #Loading the images
-def load_images(path_to_directory):
+def load_images(mbti, path_to_directory):
+
+    if mbti == 7 :
+        obj = 'istj'
+        
+    elif mbti == 1:
+        obj = 'infj'
+
+    elif mbti == 3:
+        obj = 'intj'
+
+    elif mbti == 6:
+        obj = 'istp'
+
+    elif mbti == 4:
+        obj = 'isfp'
+
+    elif mbti == 0:
+        obj = 'infp'
+
+    elif mbti == 2:
+        obj = 'intp'
+
+    elif mbti == 5:
+        obj = 'isfj'
+
+    elif mbti == 14:
+        obj = 'estp'
+
+    elif mbti == 12:
+        obj = 'esfp'
+
+    elif mbti == 8:
+        obj = 'enfp'
+
+    elif mbti == 10:
+        obj = 'entp'
+
+    elif mbti == 15:
+        obj = 'estj'
+
+    elif mbti == 13:
+        obj = 'esfj'
+
+    elif mbti == 9:
+        obj = 'enfj'
+
+    elif mbti == 11:
+        obj = 'entj'
+        
     images = {}
     for dirpath, dirnames, filenames in os.walk(path_to_directory):
         for name in filenames:
             if name.endswith('.png'):
                 key = name[:-4]
-                if key != "Bg":
+                if key != "Bg" and (name.startswith(obj) or name.startswith('_')):
                     img = pygame.image.load(os.path.join(dirpath, name)).convert_alpha()
                 else:
                     img = pygame.image.load(os.path.join(dirpath, name)).convert()
@@ -163,7 +212,7 @@ class Explosion():
         self.Life = 20
 
     def draw(self, Images):
-        gameDisplay.blit(pygame.transform.scale(Images["Explosions"],(150,150)),(self.x,self.y))
+        gameDisplay.blit(pygame.transform.scale(Images["_Explosions"],(150,150)),(self.x,self.y))
 
     def update(self, Images):
         self.draw(Images)
@@ -171,22 +220,72 @@ class Explosion():
         self.y += random.randint(-5,5)
         self.Life -= 1
 
-def game_loop(Colors=[(0,255,0),(0,150,0)]):
+def game_loop(mbti,Colors=[(0,255,0),(0,150,0)]):
+    
+    if mbti == 7 :
+        obj = 'istj'
+        
+    elif mbti == 1:
+        obj = 'infj'
+
+    elif mbti == 3:
+        obj = 'intj'
+
+    elif mbti == 6:
+        obj = 'istp'
+
+    elif mbti == 4:
+        obj = 'isfp'
+
+    elif mbti == 0:
+        obj = 'infp'
+
+    elif mbti == 2:
+        obj = 'intp'
+
+    elif mbti == 5:
+        obj = 'isfj'
+
+    elif mbti == 14:
+        obj = 'estp'
+
+    elif mbti == 12:
+        obj = 'esfp'
+
+    elif mbti == 8:
+        obj = 'enfp'
+
+    elif mbti == 10:
+        obj = 'entp'
+
+    elif mbti == 15:
+        obj = 'estj'
+
+    elif mbti == 13:
+        obj = 'esfj'
+
+    elif mbti == 9:
+        obj = 'enfj'
+
+    elif mbti == 11:
+        obj = 'entj'
+        
     game_run = True
-    Images = load_images("Images")
-    Choices = ["Grapes", "Orange", "Apple","Lemon", "Strawberry"]
+    Images = load_images(mbti, "Images")
+    Choices = [obj+'1', obj+'2', obj+'3']
     player = Player()
     Fruits = []
     Lives = 3
     score = 0
+    
     for i in range(random.randint(2,5)):
         choice = random.choice(Choices)
-        if choice == "Strawberry": 
+        if choice == obj+'1': 
             Fruits.append(Fruit(Images[choice],500,800,random.randint(-20,20),random.randint(-22,-20),125,125))
         else:
             Fruits.append(Fruit(Images[choice]))
     if random.randint(1,4) <= 3:
-        Bombs = [Fruit(Images["Bomb"], 500,1000,random.randint(-30,30),-25,100,100)]
+        Bombs = [Fruit(Images["_Bomb"], 500,1000,random.randint(-30,30),-25,100,100)]
     else:
         Bombs = []
     SplitFruit = []
@@ -195,7 +294,8 @@ def game_loop(Colors=[(0,255,0),(0,150,0)]):
     while game_run == True:
 
         #gameDisplay.fill((210,140,42))
-        gameDisplay.blit(pygame.transform.scale(Images["Bg"],(DisplayWidth,DisplayHeight)),(0,0))
+        gameDisplay.blit(pygame.transform.scale(Images["_Bg"],(DisplayWidth,DisplayHeight)),(0,0))
+        
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -213,7 +313,7 @@ def game_loop(Colors=[(0,255,0),(0,150,0)]):
                 pygame.draw.rect(gameDisplay,(250,0,0),(25+(i*55),10,50,50),0)
                 pygame.draw.rect(gameDisplay,(150,0,0),(25+(i*55),10,50,50),5)
         else:
-            MainMenu.HomeScreen(score)
+            MainMenu.HomeScreen(mbti, score)
 
         #Drawing all the fruit and its sliced counterparts
         stop = False
@@ -222,22 +322,8 @@ def game_loop(Colors=[(0,255,0),(0,150,0)]):
             if fruit.y <= 800:
                 stop = True
             if pygame.sprite.collide_rect(player, fruit) == True and player.drag and not fruit.split:
+                fruit.Image = Images["_sparkles"]
                 fruit.split = True
-                if fruit.Image == Images["Grapes"]:
-                    fruit.Image = Images["GrapeTop"]
-                    Fruits.append(Fruit(Images["GrapeBottom"],fruit.x,fruit.y,fruit.Vx*-2,fruit.gravity*1.5))
-                elif fruit.Image == Images["Orange"]:
-                    fruit.Image = Images["OrangeTop"]
-                    Fruits.append(Fruit(Images["OrangeBottom"],fruit.x,fruit.y,fruit.Vx*-2,fruit.gravity*1.5))
-                elif fruit.Image == Images["Apple"]:
-                    fruit.Image = Images["AppleTop"]
-                    Fruits.append(Fruit(Images["AppleBottom"],fruit.x,fruit.y,fruit.Vx*-2,fruit.gravity*1.5))
-                elif fruit.Image == Images["Lemon"]:
-                    fruit.Image = Images["LemonTop"]
-                    Fruits.append(Fruit(Images["LemonBottom"],fruit.x,fruit.y,fruit.Vx*-2,fruit.gravity*1.5))
-                elif fruit.Image == Images["Strawberry"]:
-                    fruit.Image = Images["StrawberryTop"]
-                    Fruits.append(Fruit(Images["StrawberryBottom"],fruit.x,fruit.y,fruit.Vx*-2,fruit.gravity*1.5,125,125))
                 Fruits[-1].split = True
                 score += 10
         for fruit in Bombs:
@@ -257,12 +343,12 @@ def game_loop(Colors=[(0,255,0),(0,150,0)]):
             Fruits = []
             for i in range(random.randint(2,5)):
                 choice = random.choice(Choices)
-                if choice == "Strawberry": 
+                if choice == obj+'1': 
                     Fruits.append(Fruit(Images[choice],500,800,random.randint(-20,20),random.randint(-22,-20),125,125))
                 else:
                     Fruits.append(Fruit(Images[choice]))
             if random.randint(1,4) <= 3:
-                Bombs = [Fruit(Images["Bomb"],500,800,random.randint(-40,40),-20,100,100)]
+                Bombs = [Fruit(Images["_Bomb"],500,800,random.randint(-40,40),-20,100,100)]
             else:
                 Bombs = []
         for explosion in Explosions:
@@ -280,6 +366,6 @@ def game_loop(Colors=[(0,255,0),(0,150,0)]):
         pygame.display.flip()
         clock.tick(60)
 
-
 if __name__ == "__main__":
     MainMenu.HomeScreen()
+
