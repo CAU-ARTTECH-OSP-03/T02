@@ -10,11 +10,10 @@ except ImportError:
     print("Make sure you have python 3 and pygame.")
     sys.exit()
 try:
-    import main
+    from MBTI_Ninja import main
 except ImportError:
     print("Make sure you have all the extra files")
 from pygame import freetype
-
 
 #game_font = pygame.freetype.Font("Font.ttf", 75)
 #text_surface, rect = game_font.render(("Programmer: 8BitToaster"), (0, 0, 0))
@@ -37,13 +36,62 @@ SizeCheck_75 = pygame.font.Font("./MBTI_Ninja/Font.ttf", 75)
 font_35 = pygame.freetype.Font("./MBTI_Ninja/Font.ttf", 35)
 
 #Loading the images
-def load_images(path_to_directory):
+def load_images(mbti, path_to_directory):
+
+    if mbti == 7 :
+        obj = 'istj'
+        
+    elif mbti == 1:
+        obj = 'infj'
+
+    elif mbti == 3:
+        obj = 'intj'
+
+    elif mbti == 6:
+        obj = 'istp'
+
+    elif mbti == 4:
+        obj = 'isfp'
+
+    elif mbti == 0:
+        obj = 'infp'
+
+    elif mbti == 2:
+        obj = 'intp'
+
+    elif mbti == 5:
+        obj = 'isfj'
+
+    elif mbti == 14:
+        obj = 'estp'
+
+    elif mbti == 12:
+        obj = 'esfp'
+
+    elif mbti == 8:
+        obj = 'enfp'
+
+    elif mbti == 10:
+        obj = 'entp'
+
+    elif mbti == 15:
+        obj = 'estj'
+
+    elif mbti == 13:
+        obj = 'esfj'
+
+    elif mbti == 9:
+        obj = 'enfj'
+
+    elif mbti == 11:
+        obj = 'entj'
+
     images = {}
     for dirpath, dirnames, filenames in os.walk(path_to_directory):
         for name in filenames:
             if name.endswith('.png'):
                 key = name[:-4]
-                if key != "Bg":
+                if key != "Bg" and (name.startswith(obj) or name.startswith('_')):
                     img = pygame.image.load(os.path.join(dirpath, name)).convert_alpha()
                 else:
                     img = pygame.image.load(os.path.join(dirpath, name)).convert()
@@ -106,7 +154,8 @@ def shorten(Num):
         Num += "S"
     return Num
 
-def HomeScreen(score=0):
+def HomeScreen(mbti, score=0):
+
     game_run = True
     Buttons = [Button(275,600,200,100,"Play"),Button(525,600,200,100,"Change Color")]
     CcButtons = [Button(750,650,200,100,"Exit"),Button(150,250,50,50,""),Button(800,250,50,50,"")]
@@ -114,7 +163,7 @@ def HomeScreen(score=0):
     Colors = [(0,250,0),(250,0,0),(0,0,250),(255,255,0),(0,255,255)]
     SubColors = [(0,150,0),(150,0,0),(0,0,150),(150,150,0),(0,150,150)]
     ColorSelection = 0
-    Images = load_images("Images")
+    Images = load_images(mbti, "Images")
     
     while game_run == True:
 
@@ -134,7 +183,7 @@ def HomeScreen(score=0):
                     for i, button in enumerate(Buttons):
                         if button.x <= pos[0] <= button.x + button.width and button.y <= pos[1] <= button.y + button.height:
                             if i == 0:
-                                main.game_loop([Colors[ColorSelection],SubColors[ColorSelection]])
+                                main.game_loop(mbti,[Colors[ColorSelection],SubColors[ColorSelection]])
                             if i == 1:
                                 screen = "Change Color"
                 if screen == "Change Color":
@@ -174,6 +223,6 @@ def HomeScreen(score=0):
         clock.tick(60)
 
 
-
 if __name__ == "__main__":
     HomeScreen()
+

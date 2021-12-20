@@ -3,11 +3,15 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5 import *
+import time, random, math
+import pygame
+from pygame import freetype
 
 import sys, os
 
-sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
-from MBTI_Ninja.MainMenu import HomeScreen
+
+from MBTI_Ninja import MainMenu
+from MBTI_Ninja import main
 
 from mod1 import *
 
@@ -988,8 +992,6 @@ class question20(QWidget):  # U
     def winB_clicked(self):
         adding(1, (self.rbtn1.isChecked()))
         self.close()
-        print(mbti_result())
-        print(mbti)
         character.__init__()
         character.show()
 
@@ -1002,12 +1004,8 @@ class question20(QWidget):  # U
 
 class Result(QWidget):
 
-    global etc
-    a = 0
-
-
     def __init__(self):
-        print(self.a)
+
         super().__init__()
         self.initUI()
         
@@ -1040,13 +1038,13 @@ class Result(QWidget):
         
 
     def loadcell(self):
-        self.a += 1
+
 
         pixmap1 = QPixmap()
         cell_txt = QLabel()
         cell_txt.setAlignment(Qt.AlignCenter)
         self.result = mbti_result()
-        print(self.result)
+        #print(self.result)
 
          #mbti 결과 반환인자를 result라고 가정
 
@@ -1179,6 +1177,7 @@ class Result(QWidget):
 
     def next(self):
         self.close()
+        etc.__init__()
         etc.show()
 
 
@@ -1199,11 +1198,6 @@ class Etc(QWidget): # 게임 설명
         palette.setBrush(10, QBrush(size))
         self.setPalette(palette)
         self.center()
-
-        btn_game = QPushButton('게임 start!', self)
-        btn_game.setGeometry(400, 520, 210, 40)
-        btn_game.clicked.connect(HomeScreen)
-
         self.loadcell()
 
 
@@ -1214,9 +1208,14 @@ class Etc(QWidget): # 게임 설명
         self.move(qr.topLeft())
 
     def loadcell(self):
+        
         pixmap1 = QPixmap()
         self.icon = mbti_result()
-        print(self.icon)
+        #print(self.icon)
+
+        btn_game = QPushButton('게임 시작!', self)
+        btn_game.setGeometry(400, 520, 210, 40)
+        btn_game.clicked.connect(self.game)
 
         # mbti 결과 반환인자를 result라고 가정
 
@@ -1290,11 +1289,11 @@ class Etc(QWidget): # 게임 설명
         cell_img.setAlignment(Qt.AlignCenter)
         cell_img.move(485, 350)
 
-        txt1 = QLabel("당신의 성격을 잘 나타내는 아이콘을 자르세요!", self)
+        txt1 = QLabel("당신의 성격을 잘 나타내는 아이콘을 모으세요!", self)
         txt1.setAlignment(Qt.AlignCenter)
         font1 = txt1.font()
         font1.setPointSize(18)
-        txt2 = QLabel("당신의 MBTI는 보통 다음과 같은 성격을 나타냅니다. \n\n 폭탄을 피해서 당신의 성격에 해당하는 아이콘을 자르세요!", self)
+        txt2 = QLabel("당신의 MBTI는 보통 다음과 같은 성격을 나타냅니다. \n\n 폭탄을 피해서 당신의 성격에 해당하는 아이콘을 클릭하세요!", self)
         txt2.setAlignment(Qt.AlignCenter)
         font1 = txt1.font()
         font1.setPointSize(18)
@@ -1309,6 +1308,10 @@ class Etc(QWidget): # 게임 설명
         vbox.addStretch(5)
 
         self.setLayout(vbox)
+
+    def game(self) :
+        self.close()
+        MainMenu.HomeScreen(self.icon)
 
 
 app = QApplication(sys.argv)
@@ -1339,4 +1342,4 @@ etc = Etc()
 # game = Game() # 뒤에 이어질 컨텐츠
 
 
-sys.exit(app.exec_())
+#sys.exit(app.exec_())
