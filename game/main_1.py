@@ -1339,7 +1339,8 @@ U = question20()
 
 character = Result()
 etc = Etc()
-# game = Game() # 뒤에 이어질 컨텐츠
 
-
-#sys.exit(app.exec_())
+if __name__ == '__main__':
+   
+   sys.exit(app.exec_())
+   os.system('pause')

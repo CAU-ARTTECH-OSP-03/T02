@@ -28,7 +28,7 @@ clock = pygame.time.Clock()
 
 gameDisplay = pygame.display.set_mode((DisplayWidth,DisplayHeight))
 pygame.display.set_caption("Fruit Ninja")
-font_100 = pygame.freetype.Font("./MBTI_Ninja/Font.ttf", 100)
+font_100 = pygame.freetype.Font("MBTI_Ninja/Font.ttf", 100)
 font_50 = pygame.freetype.Font("./MBTI_Ninja/Font.ttf", 50)
 font_75 = pygame.freetype.Font("./MBTI_Ninja/Font.ttf", 75)
 SizeCheck = pygame.font.Font("./MBTI_Ninja/Font.ttf", 50)
