@@ -22,14 +22,16 @@ from pygame import freetype
 #gameDisplay.blit(text_surface, (150, 300))
 
 # Initialize the game engine
+
+
 pygame.init()
 
-
-DisplayWidth,DisplayHeight =1000, 800
-clock = pygame.time.Clock()
-
+DisplayWidth,DisplayHeight = 1000, 800
 gameDisplay = pygame.display.set_mode((DisplayWidth,DisplayHeight))
 pygame.display.set_caption("Name")
+
+clock = pygame.time.Clock()
+
 
 #Loading the images
 def load_images(mbti, path_to_directory):
@@ -221,6 +223,7 @@ class Explosion():
         self.Life -= 1
 
 def game_loop(mbti,Colors=[(0,255,0),(0,150,0)]):
+
     
     if mbti == 7 :
         obj = 'istj'

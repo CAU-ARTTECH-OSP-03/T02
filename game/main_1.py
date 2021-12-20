@@ -40,19 +40,19 @@ class Startwindow(QWidget):  # A
         self.center()
 
         label1 = QLabel('오픈소스 프로그래밍 team2의', self)
-        label1.move(350, 200)
+        label1.move(410, 220)
         label1.setFont(QFont("맑은고딕", 10))  # 한글 폰트 깨지는 문제 발생 -> 시각적으로 보기 좋은 폰트로 수정
         label1.setStyleSheet("Color : white")
         label2 = QLabel('유미의 세포들 심리테스트에', self)
-        label2.move(360, 250)
+        label2.move(410, 270)
         label2.setFont(QFont("맑은고딕", 10))
         label2.setStyleSheet("Color : white")
         label3 = QLabel('오신 걸 환영합니다!', self)
-        label3.move(390, 300)
+        label3.move(410, 320)
         label3.setFont(QFont("맑은고딕", 10))
         label3.setStyleSheet("Color : white")
         label4 = QLabel('아래 버튼을 눌러주세요', self)
-        label4.move(370, 350)
+        label4.move(410, 370)
         label4.setFont(QFont("맑은고딕", 10))
         label4.setStyleSheet("Color : white")
 
@@ -1343,4 +1343,4 @@ etc = Etc()
 if __name__ == '__main__':
    
    sys.exit(app.exec_())
-   os.system('pause')
+
