@@ -27,6 +27,11 @@ from pygame import freetype
 pygame.init()
 
 DisplayWidth,DisplayHeight = 1000, 800
+window_size = pygame.display.get_desktop_sizes()
+pos_x = DisplayWidth / 2 - window_size[0][0] / 2
+pos_y = DisplayHeight - window_size[0][1]
+os.environ['SDL_VIDEO_WINDOW_POS'] = '%i,%i' % (pos_x,pos_y)
+os.environ['SDL_VIDEO_CENTERED'] = '0'
 gameDisplay = pygame.display.set_mode((DisplayWidth,DisplayHeight))
 pygame.display.set_caption("Name")
 

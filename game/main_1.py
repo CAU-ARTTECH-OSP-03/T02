@@ -25,14 +25,14 @@ class Startwindow(QWidget):  # A
     def initUI(self):
         self.setWindowTitle("MBTI with UMI's Cells")
         self.setWindowIcon(QIcon('icon.png'))
-        self.resize(1100, 850)
+        self.resize(1000, 820)
 
         winB = QPushButton('심리테스트 시작하기', self)
         winB.clicked.connect(self.winB_clicked)
         winB.setGeometry(430, 530, 210, 40)
 
         bgImage = QImage('startbg.png')
-        size = bgImage.scaled(QSize(1100,850))
+        size = bgImage.scaled(QSize(1000,820))
         palette = QPalette()
         palette.setBrush(10, QBrush(size))
 
@@ -40,19 +40,19 @@ class Startwindow(QWidget):  # A
         self.center()
 
         label1 = QLabel('오픈소스 프로그래밍 team2의', self)
-        label1.move(460, 250)
+        label1.move(400, 250)
         label1.setFont(QFont("맑은고딕", 10))  # 한글 폰트 깨지는 문제 발생 -> 시각적으로 보기 좋은 폰트로 수정
         label1.setStyleSheet("Color : white")
         label2 = QLabel('유미의 세포들 심리테스트에', self)
-        label2.move(460, 300)
+        label2.move(400, 300)
         label2.setFont(QFont("맑은고딕", 10))
         label2.setStyleSheet("Color : white")
         label3 = QLabel('오신 걸 환영합니다!', self)
-        label3.move(460, 350)
+        label3.move(400, 350)
         label3.setFont(QFont("맑은고딕", 10))
         label3.setStyleSheet("Color : white")
         label4 = QLabel('아래 버튼을 눌러주세요', self)
-        label4.move(460, 400)
+        label4.move(400, 400)
         label4.setFont(QFont("맑은고딕", 10))
         label4.setStyleSheet("Color : white")
 
@@ -79,10 +79,10 @@ class question1(QWidget):  # B
     def initUI(self):
         self.setWindowTitle("질문 1")
         self.setWindowIcon(QIcon('winicon.png'))
-        self.resize(1100, 850)
+        self.resize(1000, 820)
 
         bgImage = QImage('questionbg.PNG')
-        size = bgImage.scaled(QSize(1100, 850))
+        size = bgImage.scaled(QSize(1000, 820))
         palette = QPalette()
         palette.setBrush(10, QBrush(size))
 
@@ -125,10 +125,10 @@ class question2(QWidget):  # C
     def initUI(self):
         self.setWindowTitle("질문 2")
         self.setWindowIcon(QIcon('winicon.png'))
-        self.resize(1100, 850)
+        self.resize(1000, 820)
 
         bgImage = QImage('questionbg.PNG')
-        size = bgImage.scaled(QSize(1100, 850))
+        size = bgImage.scaled(QSize(1000, 820))
         palette = QPalette()
         palette.setBrush(10, QBrush(size))
 
@@ -171,10 +171,10 @@ class question3(QWidget):  # D
     def initUI(self):
         self.setWindowTitle("질문 3")
         self.setWindowIcon(QIcon('winicon.png'))
-        self.resize(1100, 850)
+        self.resize(1000, 820)
 
         bgImage = QImage('questionbg.PNG')
-        size = bgImage.scaled(QSize(1100, 850))
+        size = bgImage.scaled(QSize(1000, 820))
         palette = QPalette()
         palette.setBrush(10, QBrush(size))
 
@@ -217,10 +217,10 @@ class question4(QWidget):  # E
     def initUI(self):
         self.setWindowTitle("질문 4")
         self.setWindowIcon(QIcon('winicon.png'))
-        self.resize(1100, 850)
+        self.resize(1000, 820)
 
         bgImage = QImage('questionbg.PNG')
-        size = bgImage.scaled(QSize(1100, 850))
+        size = bgImage.scaled(QSize(1000, 820))
         palette = QPalette()
         palette.setBrush(10, QBrush(size))
 
@@ -263,10 +263,10 @@ class question5(QWidget):  # F
     def initUI(self):
         self.setWindowTitle("질문 5")
         self.setWindowIcon(QIcon('winicon.png'))
-        self.resize(1100, 850)
+        self.resize(1000, 820)
 
         bgImage = QImage('questionbg.PNG')
-        size = bgImage.scaled(QSize(1100, 850))
+        size = bgImage.scaled(QSize(1000, 820))
         palette = QPalette()
         palette.setBrush(10, QBrush(size))
 
@@ -309,10 +309,10 @@ class question6(QWidget):  # G
     def initUI(self):
         self.setWindowTitle("질문 6")
         self.setWindowIcon(QIcon('winicon.png'))
-        self.resize(1100, 850)
+        self.resize(1000, 820)
 
         bgImage = QImage('questionbg.PNG')
-        size = bgImage.scaled(QSize(1100, 850))
+        size = bgImage.scaled(QSize(1000, 820))
         palette = QPalette()
         palette.setBrush(10, QBrush(size))
 
@@ -355,10 +355,10 @@ class question7(QWidget):  # H
     def initUI(self):
         self.setWindowTitle("질문 7")
         self.setWindowIcon(QIcon('winicon.png'))
-        self.resize(1100, 850)
+        self.resize(1000, 820)
 
         bgImage = QImage('questionbg.PNG')
-        size = bgImage.scaled(QSize(1100, 850))
+        size = bgImage.scaled(QSize(1000, 820))
         palette = QPalette()
         palette.setBrush(10, QBrush(size))
 
@@ -401,10 +401,10 @@ class question8(QWidget):  # I
     def initUI(self):
         self.setWindowTitle("질문 8")
         self.setWindowIcon(QIcon('winicon.png'))
-        self.resize(1100, 850)
+        self.resize(1000, 820)
 
         bgImage = QImage('questionbg.PNG')
-        size = bgImage.scaled(QSize(1100, 850))
+        size = bgImage.scaled(QSize(1000, 820))
         palette = QPalette()
         palette.setBrush(10, QBrush(size))
 
@@ -447,10 +447,10 @@ class question9(QWidget):  # J
     def initUI(self):
         self.setWindowTitle("질문 9")
         self.setWindowIcon(QIcon('winicon.png'))
-        self.resize(1100, 850)
+        self.resize(1000, 820)
 
         bgImage = QImage('questionbg.PNG')
-        size = bgImage.scaled(QSize(1100, 850))
+        size = bgImage.scaled(QSize(1000, 820))
         palette = QPalette()
         palette.setBrush(10, QBrush(size))
 
@@ -495,10 +495,10 @@ class question10(QWidget):  # K
     def initUI(self):
         self.setWindowTitle("질문 10")
         self.setWindowIcon(QIcon('winicon.png'))
-        self.resize(1100, 850)
+        self.resize(1000, 820)
 
         bgImage = QImage('questionbg.PNG')
-        size = bgImage.scaled(QSize(1100, 850))
+        size = bgImage.scaled(QSize(1000, 820))
         palette = QPalette()
         palette.setBrush(10, QBrush(size))
 
@@ -541,10 +541,10 @@ class question11(QWidget):  # L
     def initUI(self):
         self.setWindowTitle("질문 11")
         self.setWindowIcon(QIcon('winicon.png'))
-        self.resize(1100, 850)
+        self.resize(1000, 820)
 
         bgImage = QImage('questionbg.PNG')
-        size = bgImage.scaled(QSize(1100, 850))
+        size = bgImage.scaled(QSize(1000, 820))
         palette = QPalette()
         palette.setBrush(10, QBrush(size))
 
@@ -589,10 +589,10 @@ class question12(QWidget):  # M
     def initUI(self):
         self.setWindowTitle("질문 12")
         self.setWindowIcon(QIcon('winicon.png'))
-        self.resize(1100, 850)
+        self.resize(1000, 820)
 
         bgImage = QImage('questionbg.PNG')
-        size = bgImage.scaled(QSize(1100, 850))
+        size = bgImage.scaled(QSize(1000, 820))
         palette = QPalette()
         palette.setBrush(10, QBrush(size))
 
@@ -635,10 +635,10 @@ class question13(QWidget):  # N
     def initUI(self):
         self.setWindowTitle("질문 13")
         self.setWindowIcon(QIcon('winicon.png'))
-        self.resize(1100, 850)
+        self.resize(1000, 820)
 
         bgImage = QImage('questionbg.PNG')
-        size = bgImage.scaled(QSize(1100, 850))
+        size = bgImage.scaled(QSize(1000, 820))
         palette = QPalette()
         palette.setBrush(10, QBrush(size))
 
@@ -681,10 +681,10 @@ class question14(QWidget):  # O
     def initUI(self):
         self.setWindowTitle("질문 14")
         self.setWindowIcon(QIcon('winicon.png'))
-        self.resize(1100, 850)
+        self.resize(1000, 820)
 
         bgImage = QImage('questionbg.PNG')
-        size = bgImage.scaled(QSize(1100, 850))
+        size = bgImage.scaled(QSize(1000, 820))
         palette = QPalette()
         palette.setBrush(10, QBrush(size))
 
@@ -727,10 +727,10 @@ class question15(QWidget):  # P
     def initUI(self):
         self.setWindowTitle("질문 15")
         self.setWindowIcon(QIcon('winicon.png'))
-        self.resize(1100, 850)
+        self.resize(1000, 820)
 
         bgImage = QImage('questionbg.PNG')
-        size = bgImage.scaled(QSize(1100, 850))
+        size = bgImage.scaled(QSize(1000, 820))
         palette = QPalette()
         palette.setBrush(10, QBrush(size))
 
@@ -773,10 +773,10 @@ class question16(QWidget):  # Q
     def initUI(self):
         self.setWindowTitle("질문 16")
         self.setWindowIcon(QIcon('winicon.png'))
-        self.resize(1100, 850)
+        self.resize(1000, 820)
 
         bgImage = QImage('questionbg.PNG')
-        size = bgImage.scaled(QSize(1100, 850))
+        size = bgImage.scaled(QSize(1000, 820))
         palette = QPalette()
         palette.setBrush(10, QBrush(size))
 
@@ -819,10 +819,10 @@ class question17(QWidget):  # R
     def initUI(self):
         self.setWindowTitle("질문 17")
         self.setWindowIcon(QIcon('winicon.png'))
-        self.resize(1100, 850)
+        self.resize(1000, 820)
 
         bgImage = QImage('questionbg.PNG')
-        size = bgImage.scaled(QSize(1100, 850))
+        size = bgImage.scaled(QSize(1000, 820))
         palette = QPalette()
         palette.setBrush(10, QBrush(size))
 
@@ -865,10 +865,10 @@ class question18(QWidget):  # S
     def initUI(self):
         self.setWindowTitle("질문 18")
         self.setWindowIcon(QIcon('winicon.png'))
-        self.resize(1100, 850)
+        self.resize(1000, 820)
 
         bgImage = QImage('questionbg.PNG')
-        size = bgImage.scaled(QSize(1100, 850))
+        size = bgImage.scaled(QSize(1000, 820))
         palette = QPalette()
         palette.setBrush(10, QBrush(size))
 
@@ -911,10 +911,10 @@ class question19(QWidget):  # T
     def initUI(self):
         self.setWindowTitle("질문 19")
         self.setWindowIcon(QIcon('winicon.png'))
-        self.resize(1100, 850)
+        self.resize(1000, 820)
 
         bgImage = QImage('questionbg.PNG')
-        size = bgImage.scaled(QSize(1100, 850))
+        size = bgImage.scaled(QSize(1000, 820))
         palette = QPalette()
         palette.setBrush(10, QBrush(size))
 
@@ -958,10 +958,10 @@ class question20(QWidget):  # U
     def initUI(self):
         self.setWindowTitle("질문 20")
         self.setWindowIcon(QIcon('winicon.png'))
-        self.resize(1100, 850)
+        self.resize(1000, 820)
 
         bgImage = QImage('questionbg.PNG')
-        size = bgImage.scaled(QSize(1100, 850))
+        size = bgImage.scaled(QSize(1000, 820))
         palette = QPalette()
         palette.setBrush(10, QBrush(size))
 
@@ -1013,10 +1013,10 @@ class Result(QWidget):
     def initUI(self):
         self.setWindowTitle("MBTI with UMI's Cells")
         self.setWindowIcon(QIcon('icon.png')) # 임시로 만든 게임아이콘, main.py와 같은 hierarchy에 위치
-        self.resize(1100, 850)
+        self.resize(1000, 820)
 
         bgImage = QImage('cellresult.png')
-        size = bgImage.scaled(QSize(1100, 850))
+        size = bgImage.scaled(QSize(1000, 820))
         palette = QPalette()
         palette.setBrush(10, QBrush(size))
 
@@ -1026,7 +1026,7 @@ class Result(QWidget):
         self.loadcell()
 
         btn_next = QPushButton('다음 콘텐츠로', self)
-        btn_next.setGeometry(450, 650, 210, 40)
+        btn_next.setGeometry(400, 580, 210, 40)
         btn_next.clicked.connect(self.next)
 
         
@@ -1190,10 +1190,10 @@ class Etc(QWidget): # 게임 설명
     def initUI(self):
         self.setWindowTitle("MBTI with UMI's Cells")
         self.setWindowIcon(QIcon('icon.png'))
-        self.resize(1100, 850)
+        self.resize(1000, 820)
 
         bgImage = QImage('intro.png')
-        size = bgImage.scaled(QSize(1100, 850))
+        size = bgImage.scaled(QSize(1000, 820))
         palette = QPalette()
         palette.setBrush(10, QBrush(size))
         self.setPalette(palette)
@@ -1214,7 +1214,7 @@ class Etc(QWidget): # 게임 설명
         #print(self.icon)
 
         btn_game = QPushButton('게임 시작!', self)
-        btn_game.setGeometry(430, 550, 220, 50)
+        btn_game.setGeometry(380, 520, 220, 50)
         btn_game.clicked.connect(self.game)
 
         # mbti 결과 반환인자를 result라고 가정
